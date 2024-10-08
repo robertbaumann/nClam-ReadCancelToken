@@ -93,7 +93,7 @@
                 }
 
                 using var reader = new StreamReader(stream);
-                result = await reader.ReadToEndAsync().ConfigureAwait(false);
+                result = await reader.ReadToEndAsync_NetStandard20(cancellationToken).ConfigureAwait(false);
 
                 if (!String.IsNullOrEmpty(result))
                 {
